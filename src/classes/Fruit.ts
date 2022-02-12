@@ -1,24 +1,24 @@
-import Food, { ClasseNutritional } from "./Food.js";
+/// <reference path="Food.ts" />
 
-class Fruit extends Food {
-  public static fruitList: Fruit[] = []
-
-  constructor(
-    name: string, 
-    calorie: number, 
-    lipid: number, 
-    glucid: number, 
-    protein: number, 
-    image: string
-  ) { 
-    super(name, ClasseNutritional.GOOD, calorie, lipid, glucid, protein, image) 
-    Fruit.fruitList.push(this)
+namespace App {
+  export class Fruit extends Food {
+    public static fruitList: Fruit[] = []
+  
+    constructor(
+      name: string, 
+      calorie: number, 
+      lipid: number, 
+      glucid: number, 
+      protein: number, 
+      image: string
+    ) { 
+      super(name, ClasseNutritional.GOOD, calorie, lipid, glucid, protein, image) 
+      Fruit.fruitList.push(this)
+    }
+  
+    public displayFood(): void {
+        
+    }
+  
   }
-
-  public displayFood(): void {
-      
-  }
-
 }
-
-export default Fruit
